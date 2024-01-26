@@ -1,11 +1,11 @@
 {
-  "name": "template-react-library-faizan",
-  "version": "0.0.2",
-  "description": "A simple template for a custom React component library",
+  "name": "react-top-and-bottom-scroll",
+  "version": "0.0.5",
+  "description": "Enhance your React components with dual-scroll functionality using the react-top-bottom-scroll package. By default, HTML provides a single scrollbar at the bottom of a container when overflow occurs. However, with react-top-bottom-scroll, you can effortlessly add mirrored scrollbars at both the top and bottom of any component or HTML element.",
   "scripts": {
     "rollup": "rollup -c"
   },
-  "author": "Alex Eagleson",
+  "author": "Faizan Ahmed",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
