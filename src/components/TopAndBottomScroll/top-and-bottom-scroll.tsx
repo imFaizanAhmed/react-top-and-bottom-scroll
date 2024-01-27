@@ -3,10 +3,11 @@ import React, { useEffect, useRef, useState, MutableRefObject } from 'react';
 // Define types for the props
 interface TopBottomScrollProps {
   children: React.ReactNode;
+  scrollHeight: number;
   styling?: React.CSSProperties;
 }
 
-const TopBottomScroll: React.FC<TopBottomScrollProps> = ({ children, styling = {} }) => {
+const TopBottomScroll: React.FC<TopBottomScrollProps> = ({ children, styling = {}, scrollHeight = 8 }) => {
   // Define the type for the refs
   const topScrollRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
@@ -62,12 +63,12 @@ const TopBottomScroll: React.FC<TopBottomScrollProps> = ({ children, styling = {
   }, []);
 
   return (
-    <div style={{ width: '100%', ...styling }}>
+    <div style={{ width: '100%' }}>
       <div
-        style={{ overflowX: 'auto', overflowY: 'hidden', marginBottom: 8 }}
+        style={{ overflow: 'auto' }}
         ref={topScrollRef}
         onScroll={() => syncScroll(topScrollRef)}>
-        <div style={{ width: `${scrollWidth}px`, height: '1px' }}></div>
+        <div style={{ ...styling, width: scrollWidth, height: scrollHeight }} />
       </div>
       <div
         style={{ width: '100%', overflow: 'auto' }}

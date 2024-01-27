@@ -1,21 +1,27 @@
 {
   "name": "react-top-and-bottom-scroll",
-  "version": "0.0.6",
+  "version": "0.0.19",
   "description": "Enhance your React components with dual-scroll functionality using the react-top-bottom-scroll package. By default, HTML provides a single scrollbar at the bottom of a container when overflow occurs. However, with react-top-bottom-scroll, you can effortlessly add mirrored scrollbars at both the top and bottom of any component or HTML element.",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "build-watch": "rollup -c -w"
   },
   "author": "Faizan Ahmed",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "@types/react": "^17.0.34",
-    "react": "^17.0.2",
-    "rollup": "^2.60.0",
-    "rollup-plugin-dts": "^4.0.1",
-    "typescript": "^4.4.4"
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "sass": "^1.52.1",
+    "typescript": "^4.6.4"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -27,5 +33,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com:imFaizanAhmed/scroll.git"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }

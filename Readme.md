@@ -9,7 +9,7 @@ Enhance your React components with dual-scroll functionality using the react-top
 
 ## Installation
 
-Top bottom scroll requires [React.js](https://react.dev/) to run.
+Top bottom scroll requires [React.js v18](https://react.dev/) to run.
 
 Install the package.
 
@@ -19,13 +19,19 @@ npm i top-bottom-scroll
 
 To using this package, wrap your components into this. Below code snippet shows a working example. 
 
+> **Note:** scrollHeight is needed to set height for scroll.
+
 ```
-<TopBottomScroll styling={{ position: 'relative' }}>
-    <newDataTable
-        data={data}
-        columns={columns}
-    />
-</TopBottomScroll>
+<ReactTopAndBottomScroll 
+    styling={{ position: 'relative' }}
+    scrollHeight={8}>
+
+        <newDataTable
+            data={data}
+            columns={columns}
+        />
+
+</ReactTopAndBottomScroll>
 ```
 ***Happy Coding :)***
 ## License
